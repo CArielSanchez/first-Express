@@ -1,11 +1,9 @@
 const express = require('express');
-const bodyParser = require('body-parser')
-const mongoose = require('mongoose');
 
 const Leaders = require('../models/leaders');
 
 const leaderRouter = express.Router();
-leaderRouter.use(bodyParser.json());
+leaderRouter.use(express.json());
 leaderRouter.route('/')
 .get((req,res,next) => {
     Leaders.find({})
