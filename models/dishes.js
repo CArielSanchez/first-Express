@@ -18,9 +18,8 @@ const commentSchema = new Schema(
             unique: false,
         },
         author: {
-            type: String,
-            required: true,
-            unique: false,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
         },
     },
     
